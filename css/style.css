@@ -1,34 +1,36 @@
 /* ------------------ WHOLE DOCUMENT ------------------ */
 :root {
-    --primary-color-light: #EEE1D1;
-    --secondary-color-light: #F5C6B5;
-    --primary-color-dark: #253822;
-    --secondary-color-dark: #C1CB5B;
+    --primary-color-light: #F1F2ED;
+    --secondary-color-light: #a2ac82;
+    --primary-color-dark: #2E2D1D;
+    --secondary-color-dark: #5B6D49;
+    --accent-color-dark: #0C3C01;
 
-    --ff-primary: 'Roboto', sans-serif;
-    --ff-secondary:  'Lora', serif;
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondary:  'Montserrat', serif;
 }
 
 * {
     box-sizing: border-box;
-    font-family: var(--ff-secondary);
+    font-family: var(--primary-color-dark);
     margin: 0;
 }
 
 body {
     background-color: var(--primary-color-light);
+    color: var(--accent-color-dark);
 }
 
 /* ------------------ HEADER ------------------ */
 header {
-    background-color: var(--secondary-color-light);
+    background-color: var(--primary-color-dark);
     display: flex;
     padding: 1em;
     align-items: center;
 }
 
 header h1, header h2 {
-    color: var(--primary-color-dark);
+    color: var(--secondary-color-light);
     font-family: var(--ff-secondary);
     margin: 0;
 }
@@ -47,7 +49,31 @@ header h2 {
 
 header img {
     padding-left: 2em;
+    width: 100px;
 }
 /* ------------------ INDEX.HTML ------------------ */
 
+.content {
+    padding: 3em;
+}
+
+.how-to h1 {
+    text-align: center;
+    font-family: var(--ff-secondary);
+    padding-bottom: 1em;
+    font-size: 40px;
+    color: var(--primary-color-dark);
+}
+
+.how-to {
+    text-align: center;
+}
+
+.how-to-step {
+    padding: 1em;
+}
+
+.how-to-step h2 {
+    padding-bottom: 1em;
+}
 /* ------------------ FOOTER ------------------ */
