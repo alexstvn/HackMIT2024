@@ -1,0 +1,26 @@
+/* ------------------ WHOLE DOCUMENT ------------------ */
+:root {
+    --primary-color-light: #ECECEC;
+    --secondary-color-light: #AAABB8;
+    --primary-color-dark: #2C2C54;
+    --secondary-color-dark: #474787;
+
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-secondary:  'Lora', serif;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: var(--ff-secondary);
+    margin: 0;
+}
+
+body {
+    background-color: var(--primary-color-light);
+}
+
+/* ------------------ HEADER ------------------ */
+
+/* ------------------ INDEX.HTML ------------------ */
+
+/* ------------------ FOOTER ------------------ */
