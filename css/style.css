@@ -100,7 +100,6 @@ header img {
 }
 
 /* STEP 1 */
-
 #step1-add:hover {  
     border: 1px solid var(--secondary-color-dark);
     background-color: var(--secondary-color-dark);
@@ -109,6 +108,14 @@ header img {
 
 #step1-add:active {  
     background-color: var(--primary-color-dark);
+}
+
+#step1 h3 {
+    padding-top: 1em;
+}
+
+#step1-namelist {
+    list-style-type: none;
 }
 
 /* STEP 2 */
