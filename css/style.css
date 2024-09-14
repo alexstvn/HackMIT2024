@@ -1,9 +1,9 @@
 /* ------------------ WHOLE DOCUMENT ------------------ */
 :root {
-    --primary-color-light: #ECECEC;
-    --secondary-color-light: #AAABB8;
-    --primary-color-dark: #2C2C54;
-    --secondary-color-dark: #474787;
+    --primary-color-light: #EEE1D1;
+    --secondary-color-light: #F5C6B5;
+    --primary-color-dark: #253822;
+    --secondary-color-dark: #C1CB5B;
 
     --ff-primary: 'Roboto', sans-serif;
     --ff-secondary:  'Lora', serif;
@@ -20,7 +20,34 @@ body {
 }
 
 /* ------------------ HEADER ------------------ */
+header {
+    background-color: var(--secondary-color-light);
+    display: flex;
+    padding: 1em;
+    align-items: center;
+}
 
+header h1, header h2 {
+    color: var(--primary-color-dark);
+    font-family: var(--ff-secondary);
+    margin: 0;
+}
+
+header h1 {
+    font-size: 50px;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+}
+
+header h2 {
+    font-size: 110%;
+    font-family: var(--ff-primary);
+    padding-left: 3em;
+}
+
+header img {
+    padding-left: 2em;
+}
 /* ------------------ INDEX.HTML ------------------ */
 
 /* ------------------ FOOTER ------------------ */
