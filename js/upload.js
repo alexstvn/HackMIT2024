@@ -23,6 +23,7 @@ function addName() {
 }
 
 // Function to generate a random number for Money Owed
+// Used to just supply table with values until we can extract values from a receipt
 function getRandomMoneyOwed() {
     return (Math.random() * 100).toFixed(2); // Generates random money between 0 and 100
 }
