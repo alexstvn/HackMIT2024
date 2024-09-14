@@ -25,6 +25,22 @@ body * {
     color: var(--accent-color-dark);
 }
 
+input, button { 
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+button:hover { 
+    border: 1px solid var(--secondary-color-dark);
+    background-color: var(--secondary-color-dark);
+    color: var(--primary-color-light);
+}
+
 /* ------------------ HEADER ------------------ */
 header {
     background-color: var(--primary-color-dark);
@@ -85,16 +101,6 @@ header img {
 
 /* STEP 1 */
 
-#step1-add, #step1-name {  
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-    background-color: #f8f8f8;
-    border-radius: 4px;
-    font-size: 15px;
-}
-
 #step1-add:hover {  
     border: 1px solid var(--secondary-color-dark);
     background-color: var(--secondary-color-dark);
@@ -115,4 +121,13 @@ header img {
     border-radius: 4px;
     font-size: 15px;
 }
+
+/* CALCULATE STEP */
+#step-calculate-table{
+    text-align: center;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* ------------------ FOOTER ------------------ */

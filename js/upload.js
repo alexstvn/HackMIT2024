@@ -29,7 +29,7 @@ function getRandomMoneyOwed() {
 
 // Function to update the table in Step 5
 function updateMoneyTable() {
-    var tableBody = document.getElementById("step5-tbody");
+    var tableBody = document.getElementById("step-calculate-tbody");
 
     // Clear any existing rows in the Step 5 table body
     tableBody.innerHTML = "";
