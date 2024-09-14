@@ -34,15 +34,16 @@
                 <div class="how-to-step" id="step1">
                     <h2><em>Step 1:</em> Write out the names.</h2>
                     <form>
-                        <input type="text" placeholder="Name">
-                        <input type="button" value="Add">
+                        <input type="text" placeholder="Name" id="step1-name">
+                        <input type="button" value="Add" id="step1-add">
                     </form>
                 </div>
 
                 <!-- STEP 2: Upload Receipt -->
                 <div class="how-to-step" id="step2">
                     <h2><em>Step 2:</em> Upload Receipt Here.</h2>
-                    <p>Enter texts here.</p>
+                    <label for="file-upload" class="custom-file-upload">Upload File</label>
+                    <input type="file" name="file-upload" id="file-upload" style="display: none;" accept=".jpg, .jpeg, .png">
                 </div>
 
                 <!-- STEP 3: Double Check -->
