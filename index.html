@@ -2,7 +2,6 @@
     <head>
         <!-- STYLING -->
         <link rel="stylesheet" href="css/style.css">
-        <script src="js/upload.js"></script>
 
         <!-- FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -65,12 +64,28 @@
                 <!-- STEP 5: Split expenses -->
                 <div class="how-to-step" id="step5">
                     <h2><em>Step 5:</em> Calculate.</h2>
-                    <p>Enter texts here.</p>
+                    <p>Below is the table with names and money owed:</p>
+                    <button id="populateTableButton" onclick="updateMoneyTable()">Populate Table</button>
+
+                    <table id="step5-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Money Owed</th>
+                            </tr>
+                        </thead>
+                        <tbody id="step5-tbody">
+                            <!-- Dynamic rows will be added here -->
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
         </div>
 
+
+    <!-- SCRIPTS -->
+    <script src="js/upload.js"></script>
     </body>
     <footer class="footer-content">
         <p id="footer-copyright">&copy; 2024 Pam and Alex</p>
