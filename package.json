@@ -1,0 +1,14 @@
+{
+  "name": "hackmit2024",
+  "version": "1.0.0",
+  "description": "Hackathon for MIT project for receipt scanner.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Alex Stevenson",
+  "license": "ISC",
+  "dependencies": {
+    "@veryfi/veryfi-sdk": "^1.3.2"
+  }
+}
