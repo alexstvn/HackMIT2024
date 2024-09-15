@@ -19,10 +19,10 @@ const processReceipt = async (filePath) => {
     }
   };
   
-  // Example usage:
-//   const filePath = "./public/image/SampleReceipt.jpg"; // Replace with actual file path
-//   processReceipt(filePath).then((result) => {
-//     // You can handle the result here
-//     console.log("Processed receipt:", result);
-//   });
+   //Example usage:
+   const filePath = "./public/image/SampleReceipt.jpg"; // Replace with actual file path
+   processReceipt(filePath).then((result) => {
+     // You can handle the result here
+    console.log("Processed receipt:", result);
+   });
 module.exports = { processReceipt };

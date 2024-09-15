@@ -50,34 +50,39 @@
                     <p id="file-name"></p> <!-- To display selected file name -->
                 </div>
 
-                <!-- STEP 3: Process File -->
+                <!-- STEP 3: Save JSON -->
                 <div class="how-to-step" id="step3">
-                    <h2><em>Step 3:</em> Double Check.</h2>
-                    <button id="step-check-processfile">Process File</button>
+                    <h2><em>Step 3:</em> Download File</h2>
+                    <button id="step-check-processfile">Download JSON File</button>
                 </div>
 
-                <!-- STEP 4: Check off names -->
+                <!-- STEP 4: Paste JSON -->
                 <div class="how-to-step" id="step4">
-                    <h2><em>Step 4:</em> Split.</h2>
-                    <p>Enter texts here.</p>
+                    <h2><em>Step 4:</em> Paste JSON</h2>
+                    <textarea id="json-input" rows="10" cols="50" placeholder="Paste JSON here..."></textarea><br>
+                    <button id="process-json">Print Table</button>
+                    <pre id="json-output"></pre>
                 </div>
 
                 <!-- STEP 5: Split expenses -->
                 <div class="how-to-step" id="step-calculate">
-                    <h2><em>Step 5:</em> Calculate.</h2>
-                    <p>Below is the table with names and money owed:</p>
-                    <button id="step-calculate-populatebutton" onclick="updateMoneyTable()">Populate Table</button>
-
-                    <table id="step-calculate-table">
+                    <h2><em>Step 5:</em> Assign Values</h2>
+                    <p>After pasting your JSON, you will find a table of all purchased items below.</p>
+                    <p>Click a person's name above. Then click the items they will split. Move on to the next person.</p>
+                    <p>The number below their name, indicates the amount they owe.</p>
+                    <!-- <button id="step-calculate-populatebutton" onclick="updateTable()">Find Owed</button> -->
+                    <table id="dataTable">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Money Owed</th>
+                                <th>Item</th>
+                                <th>Price</th>
+                                <th>Person Owing</th>
                             </tr>
                         </thead>
-                        <tbody id="step-calculate-tbody">
-                            <!-- Dynamic rows will be added here -->
+                        <tbody>
+                            <!-- Table rows will be inserted here -->
                         </tbody>
+                        
                     </table>
                 </div>
             </div>
