@@ -99,12 +99,14 @@ header img {
     padding-bottom: 1em;
 }
 
-/* STEP 1 */
-#step1-add:hover {  
+/* Buttons for hovering */
+#step1-add:hover, #file-upload-label:hover {  
     border: 1px solid var(--secondary-color-dark);
     background-color: var(--secondary-color-dark);
     color: var(--primary-color-light);
 }
+
+/* STEP 1 */
 
 #step1-add:active {  
     background-color: var(--primary-color-dark);
@@ -128,6 +130,8 @@ header img {
     border-radius: 4px;
     font-size: 15px;
 }
+
+
 
 /* CALCULATE STEP */
 #step-calculate-table{
