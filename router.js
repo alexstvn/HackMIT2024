@@ -1,6 +1,8 @@
 const httpStatus = require("http-status-codes");
 const { plainTextContentType, htmlContentType, cssContentType, imgContentType } = require("./contentType"); //otherwise htmlContentType not defined error
 const { customReadFile } = require("./utils"); //otherwise error with customReadFile
+const { IncomingForm } = require('formidable');
+const { processReceipt } = require('./public/js/readReceipt');
 
 routes = {
   GET: {
@@ -53,7 +55,7 @@ routes = {
       const form = new IncomingForm();
 
       form.parse(req, async (err, fields, files) => {
-        console.log('Files received:', files);
+        // console.log('Files received:', files); // debug only
         if (err) {
           console.error('Error parsing form:', err);
           res.writeHead(httpStatus.INTERNAL_SERVER_ERROR, { 'Content-Type': 'text/html' });
@@ -63,7 +65,7 @@ routes = {
 
         const file = files.receipt[0];
         if (file) {
-          console.log('Processing file:', file.filepath);
+        //   console.log('Processing file:', file.filepath); // for debugging only
           try {
             const result = await processReceipt(file.filepath);
             res.writeHead(httpStatus.OK, { 'Content-Type': 'application/json' });

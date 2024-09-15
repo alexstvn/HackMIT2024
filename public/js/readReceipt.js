@@ -11,6 +11,7 @@ const processReceipt = async (filePath) => {
     try {
       const response = await veryfi_client.process_document(filePath);
       console.log(response); // Output the result to the console
+      // would need to change this in order to actually grab the data (total, description)
       return response;
     } catch (error) {
       console.error("Error processing receipt:", error);
@@ -19,8 +20,9 @@ const processReceipt = async (filePath) => {
   };
   
   // Example usage:
-  const filePath = "./public/image/SampleReceipt.jpg"; // Replace with actual file path
-  processReceipt(filePath).then((result) => {
-    // You can handle the result here
-    console.log("Processed receipt:", result);
-  });
+//   const filePath = "./public/image/SampleReceipt.jpg"; // Replace with actual file path
+//   processReceipt(filePath).then((result) => {
+//     // You can handle the result here
+//     console.log("Processed receipt:", result);
+//   });
+module.exports = { processReceipt };
