@@ -48,7 +48,38 @@ routes = {
         customReadFile(jsFilePath, res);
     },
   },
-  POST: {},
+  POST: {
+    '/process-receipt': async (req, res) => {
+      const form = new IncomingForm();
+
+      form.parse(req, async (err, fields, files) => {
+        console.log('Files received:', files);
+        if (err) {
+          console.error('Error parsing form:', err);
+          res.writeHead(httpStatus.INTERNAL_SERVER_ERROR, { 'Content-Type': 'text/html' });
+          res.end('<h1>Error processing file</h1>');
+          return;
+        }
+
+        const file = files.receipt[0];
+        if (file) {
+          console.log('Processing file:', file.filepath);
+          try {
+            const result = await processReceipt(file.filepath);
+            res.writeHead(httpStatus.OK, { 'Content-Type': 'application/json' });
+            res.end(JSON.stringify(result));
+          } catch (error) {
+            console.error('Error processing receipt:', error);
+            res.writeHead(httpStatus.INTERNAL_SERVER_ERROR, { 'Content-Type': 'text/html' });
+            res.end('<h1>Error processing receipt</h1>');
+          }
+        } else {
+          res.writeHead(httpStatus.BAD_REQUEST, { 'Content-Type': 'text/html' });
+          res.end('<h1>No file received</h1>');
+        }
+      });
+    }
+},
 };
 exports.handle = (req, res) => {
   try {
