@@ -1,5 +1,5 @@
 // process file
-
+const readReceipt = require("./readReceipt")
 const fileInput = document.getElementById('file-upload');
 const processButton = document.getElementById('step-check-processfile');
 const fileNameDisplay = document.getElementById('file-name');

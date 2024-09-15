@@ -41,6 +41,12 @@ routes = {
         res.writeHead(httpStatus.OK, plainTextContentType); // Update content type to match JS
         customReadFile(jsFilePath, res);
     },
+
+    "/public/js/readReceipt.js": (req, res) => {
+        const jsFilePath = "./public/js/processFile.js"; // Path to JS file
+        res.writeHead(httpStatus.OK, plainTextContentType); // Update content type to match JS
+        customReadFile(jsFilePath, res);
+    },
   },
   POST: {},
 };

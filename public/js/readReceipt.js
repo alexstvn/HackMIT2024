@@ -7,10 +7,20 @@ const username = 'astevenson';
 const api_key = 'f7ce1022dafe0b6934b3828554eb72e8';
 
 let veryfi_client = new Client(client_id, client_secret, username, api_key);
-let file_path = "./image/SampleReceipt.jpg"; // Corrected file path
-
-// Takes in a file path to an image of a receipt
-const response=async() => await veryfi_client.process_document(file_path)
-
-// outputs anything we get back into the console
-response().then(console.log)
+const processReceipt = async (filePath) => {
+    try {
+      const response = await veryfi_client.process_document(filePath);
+      console.log(response); // Output the result to the console
+      return response;
+    } catch (error) {
+      console.error("Error processing receipt:", error);
+      throw error; // You can throw or handle the error based on your needs
+    }
+  };
+  
+  // Example usage:
+  const filePath = "./public/image/SampleReceipt.jpg"; // Replace with actual file path
+  processReceipt(filePath).then((result) => {
+    // You can handle the result here
+    console.log("Processed receipt:", result);
+  });
